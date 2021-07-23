@@ -154,7 +154,18 @@ function CuboidMaker(att){
   2 * (length * width + length * height + width * height)  */
 
 
-
+  CuboidMaker.prototype.surfaceArea = function(){
+    const area = 2*(this.length*this.width + this.length*this.height + this.width*this.height);
+    return area;
+  }
+  
+  function child2(length, width, height){
+    CuboidMaker.call(this, length, width, height);
+    const area = 2*(this.length*this.width + this.length*this.height + this.width*this.height);
+    return area;
+  }
+  
+  child2.prototype = Object.create(CuboidMaker.prototype);
 
 
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
