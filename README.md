@@ -26,13 +26,27 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+.map grabs certain objects from an array and pushes them into a new array, with only the objects that was called in the function. An example for using .map is getting the last name and phone numbers of all employees in an array. The array/employee list will have other objects in it like the first name, address, and other variables but we will only need their last name and phone number for the new array.
+
+.reduce grabs the numerical functions from an array, and depends on the algorithm that was used, will reduce the the numerical objects to a single value. A good example for this is if you have a group of part-time employees and you want to find the total of everybody's work hours, we can use .reduce to grab each employee's hours and add them all and end up with a single value from the array of the employee list.
+
+.filter will cut down the array to find the data with need according to the criteria we want. .filter can be used for true/false and numerical criteria. Example for using .filter is if you want to find out which employees in your array has already taken their drug test, we can use .filter if the employee has been tested (true/false). For a numerical example, if you want to see which employees have worked more than 35 hrs in a week. We will have to set the filter to < 36 hours to find out which employees and return the data to a new array for that criteria. 
+
 2. Explain the difference between a callback and a higher order function.
+
+A higher order function is a function that receives other functions as an argument, which are the callback functions. Callback functions can be a standalone function, but we can also use these functions for higher order functions. 
 
 3. Explain what a closure is.
 
+A closure is when a function accesses data outside of its own scope for its variables. 
+
 4. Describe the four principles of the 'this' keyword.
 
+
+
 5. Why do we need super() in an extended class?
+
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
