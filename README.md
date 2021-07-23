@@ -42,11 +42,15 @@ A closure is when a function accesses data outside of its own scope for its vari
 
 4. Describe the four principles of the 'this' keyword.
 
+New binding - is for a new key that will be created in a constructor function.
 
+Implicit binding - Applies to objects with methods. This refers to the the data on the left of the dot.
+
+Explicit binding - are for functions that will be using .call, .apply or .bind. .call will immediately execute the function that was passed. .apply will execute once the conditions of the arguments has been passed. .bind will not execute the function that was passed. .bind will be executed once it has been invoked in another function/argument.
 
 5. Why do we need super() in an extended class?
 
-
+Every child object/function has to inherit all of its parents' arguments. Using super will call the parent constructor's objects and arguments to the child.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
