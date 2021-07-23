@@ -29,8 +29,6 @@ The internal that was console logged is found in a function within the main func
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-number = number.length;
-for 
   }
  
 
@@ -125,16 +123,27 @@ const multiply = (a, b) => a * b;
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(att){
+  this.length = att.length;
+  this.width = att.width;
+  this.height = att.height;
 }
-
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-
+  CuboidMaker.prototype.volume = function(){
+    return this.length * this.width * this.height; 
+  }
+  
+  function Child(length, width, height){
+    CuboidMaker.call(this, length, width, height);
+    volume = length*width*height;
+  }
+  
+  Child.prototype = Object.create(Cuboidmaker.prototype);
+  
 
 
 
