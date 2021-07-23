@@ -54,10 +54,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-    const displayNames =[];
-    zooAnimals.forEach(item => displayNames.push(`${item.animal_name}, ${item.scientific_name}`));
+    const animalNames =[];
+    zooAnimals.forEach(item => animalNames.push(`${item.animal_name}, ${item.scientific_name}`));
   
-    console.log(displayNames);
+    console.log(animalNames);
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -134,17 +134,15 @@ function CuboidMaker(att){
   Formula for cuboid volume: length * width * height   */
 
   CuboidMaker.prototype.volume = function(){
-    return this.length * this.width * this.height; 
+    const volume = this.length * this.width * this.height; 
+    return volume;
   }
   
-  function Child(length, width, height){
+  function cuboid(length, width, height){
     CuboidMaker.call(this, length, width, height);
-    volume = length*width*height;
+    return length*width*height;
   }
   
-  Child.prototype = Object.create(Cuboidmaker.prototype);
-  
-
 
 
 /* 🐴🐴🐴 Step 3: Surface Area Method 🐴🐴🐴
