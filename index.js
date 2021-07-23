@@ -17,9 +17,9 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+/*
+The internal that was console logged is found in a function within the main function. nestedFunction is still part of myFunction and calling internal within myFunction is viable. myFunction calls for the global variable "external", but it also has the variable internal which isn't called in the myFunction function. 
+*/
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -28,9 +28,9 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+number = number.length;
+for 
   }
  
 
@@ -56,10 +56,10 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+    const displayNames =[];
+    zooAnimals.forEach(item => displayNames.push(`${item.animal_name}, ${item.scientific_name}`));
   
+    console.log(displayNames);
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -67,19 +67,17 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+  const lowerCaseNames = zooAnimals.map(item => item.animal_name.toLowerCase());
+
+  console.log(lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  const lowPopulationAnimals = zooAnimals.filter (item => item.population > 5);
+   console.log(lowPopulationAnimals);
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
