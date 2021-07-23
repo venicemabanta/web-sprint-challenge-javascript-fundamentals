@@ -138,10 +138,13 @@ function CuboidMaker(att){
     return volume;
   }
   
-  function cuboid(length, width, height){
+  function child(length, width, height){
     CuboidMaker.call(this, length, width, height);
-    return length*width*height;
+    const volume = this.length * this.width * this.height; 
+    return volume;
   }
+
+  child.prototype = Object.create(CuboidMaker.prototype);
   
 
 
@@ -159,6 +162,11 @@ function CuboidMaker(att){
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
 
+  const cuboid = new CuboidMaker({
+    length: 4,
+    width: 5,
+    height: 5
+  });
 
 
 
